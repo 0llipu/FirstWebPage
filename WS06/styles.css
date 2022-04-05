@@ -1,0 +1,208 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Tahoma;
+}
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	border-width: 1px;
+	border-color: #000000;
+	border-style: double;
+	border-radius: 15px;
+	background-color: white;
+}
+
+h1 {
+	color: #5a0401;
+	font-size: 32px;
+	text-shadow: 2px 2px grey;
+}
+
+h2 {
+	color: #e9d1b0;
+	font-size: 18px;
+	text-shadow: 1px 1px black;
+}
+
+p {
+	font-size: 14px;
+	color: #000000;
+}
+/*Pyydetty pseudo-efekti tehty nappiin.
+Näitä perus pseudoja ei ole käytetty verkkosivun ulkoasun luomiseen.
+a {
+	font-size: 16px;
+}
+
+a:link {
+	color: black;
+}
+
+a:visited {
+	color: blue;
+}
+a:focus {
+	color: lightblue;
+}
+a:hover {
+	color: red;
+}
+a:active {
+	color: grey;
+}*/
+
+figure {
+	float: left;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+#header {
+	border-radius: 15px 15px 0px 0px;
+	background: linear-gradient(#dbbe8f, #ffffff);
+	text-align: center;
+	padding: 5px;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+#nav-main {
+	background: linear-gradient(to bottom, #ffffff, #5a0401);
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	float: left;
+	height: 35px;
+	border-style: none solid none none;
+	border-width: 1px;
+	border-image: linear-gradient(to top, #000000, #ffffff) 1;
+}
+#nav-vertical {
+	background: linear-gradient(to bottom, #ffffff, #5a0401);
+	width: 7%;
+	min-width: 80px;
+	padding: 5px;
+	text-align: left;
+	float: left;
+	height: 402px;
+	border-style: none solid none none;
+	border-width: 1px;
+	border-image: linear-gradient(to top, #000000, #ffffff) 1;
+}
+
+#section {
+	content: "";
+	display: table;
+	width: 93%;
+	border-style: solid none solid none;
+	border-width: 1px;
+	border-image: linear-gradient(to left, #000000, #ffffff) 1;
+}
+
+#article {
+	float: left;
+	height: 400px;
+	margin-left: 10px;
+	width: 60%;
+	text-align: center;
+}
+
+#aside {
+	float: right;
+	height: 400px;
+	margin-right: 10px;
+	width: 30%;
+	text-align: left;
+	margin-left: 20px;
+	padding: 20px;
+}
+
+#footer {
+	border-radius: 0px 0px 15px 15px;
+	background-color: #5a0401;
+	text-align: center;
+	padding: 5px;
+	clear: both;
+}
+
+.btn-red {
+	border: 0 outset #5a0401;
+	border-radius: 2px;
+	box-shadow: inset 0 0 10px #ffffff;
+	outline: 1px solid;
+	outline-color: #5a0401;
+	outline-offset: 0px;
+	text-shadow: none;
+	transition: all 900ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.btn-red:hover {
+	border: 0px inset red;
+	box-shadow: inset 0 0 15px red;
+	outline-color: red;
+	outline-offset: 3px;
+	text-shadow: 1px 1px 2px #000000;
+	color: #ffffff;
+}
+.btn-main {
+	text-align: center;
+	width: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 2px;
+	color: #5a0401;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-shadow: 2px 2px lightgrey;
+	display: inline-block;
+	position: relative;
+	background-color: #dbbe8f;
+}
+
+.btn-vertical-move {
+	border: 0 outset #dbbe8f;
+	border-radius: 2px;
+	box-shadow: inset 0 0 10px #ffffff;
+	outline: 1px solid;
+	outline-color: #dbbe8f;
+	outline-offset: 0px;
+	text-shadow: none;
+	transition: all 900ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.btn-vertical-move:hover {
+	border: 0px inset #000000;
+	box-shadow: inset 0 0 15px #ffffff;
+	outline-color: #000000;
+	outline-offset: 3px;
+	text-shadow: 1px 1px 2px #000000;
+	color: #ffffff;
+}
+.btn-vertical {
+	text-align: center;
+	width: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 2px;
+	color: #dbbe8f;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-shadow: 2px 2px #000000;
+	display: block;
+	position: relative;
+	background-color: #5a0401;
+}
