@@ -44,38 +44,6 @@ nav {
 	margin: 5px;
 	transition: all 0.3s ease;
 }
-/*
-@media screen and (max-width: 1600px) {
-	.nav-links {
-		width: 55%;
-	}
-}
-@media screen and (max-width: 1200px) {
-	.nav-links {
-		width: 60%;
-	}
-}
-@media screen and (max-width: 1024px) {
-	.nav-links {
-		width: 65%;
-	}
-}
-@media screen and (max-width: 900px) {
-	.nav-links {
-		width: 70%;
-	}
-	.nav-links a {
-		font-size: 13px;
-	}
-}
-@media screen and (max-width: 768px) {
-	.nav-links {
-		width: 90%;
-	}
-	.nav-links a {
-		font-size: 12px;
-	}
-}*/
 @media screen and (max-width: 650px) {
 	body {
 		overflow-x: hidden;
