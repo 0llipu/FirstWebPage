@@ -16,6 +16,7 @@ const navSlide = () => {
 				}s`;
 			}
 		});
+		burger.classList.toggle("x-mark");
 	});
 };
 
