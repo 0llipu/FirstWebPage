@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fi">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="style.css" type="text/css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<title>My Website - R0244-3025</title>
+	</head>
+	<body>
+		<nav>
+			<div class="logo">
+				<h4>P & L O P</h4>
+			</div>
+			<ul class="nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="bikes.html">Bikes</a></li>
+				<li><a href="nature.html">Nature</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</nav>
+		<div class="form-container">
+			<h1>&bull; Contact Me &bull;</h1>
+			<form action="#" method="post" id="contact_form">
+				<div class="name">
+					<label for="name"></label>
+					<input
+						type="text"
+						placeholder="My name is"
+						name="name"
+						id="name_input"
+						required
+					/>
+				</div>
+				<div class="telephone">
+					<label for="name"></label>
+					<input
+						type="text"
+						placeholder="My number is"
+						name="telephone"
+						id="telephone_input"
+						required
+					/>
+				</div>
+				<div class="email">
+					<label for="email"></label>
+					<input
+						type="email"
+						placeholder="My e-mail is"
+						name="email"
+						id="email_input"
+						required
+					/>
+				</div>
+				<div class="subject">
+					<label for="subject"></label>
+					<select
+						placeholder="Subject line"
+						name="subject"
+						id="subject_input"
+						required
+					>
+						<option disabled hidden selected>Choose a subject</option>
+						<option>bikes</option>
+						<option>nature</option>
+						<option>personal</option>
+					</select>
+				</div>
+				<div class="message">
+					<label for="message"></label>
+					<textarea
+						name="message"
+						placeholder="I'd like to tell you..."
+						id="message_input"
+						cols="30"
+						rows="5"
+						required
+					></textarea>
+				</div>
+				<div class="submit">
+					<input type="submit" value="Send Message" id="form_button" />
+				</div>
+			</form>
+		</div>
+		<footer>
+			<div class="footer"><h5>© Olli Puustinen</h5></div>
+		</footer>
+		<script src="nav.js"></script>
+	</body>
+</html>
