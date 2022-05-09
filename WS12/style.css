@@ -161,7 +161,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin-top: 2rem;
+	margin-top: 3rem;
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
@@ -242,8 +242,8 @@ main {
 	margin-left: auto;
 	margin-right: auto;
 	border: solid 3px #474544;
-	width: 60%;
-	min-width: 555px;
+	max-width: 666px;
+	position: relative;
 }
 .email {
 	width: 100%;
@@ -298,14 +298,14 @@ form {
 	padding: 37.5px;
 }
 
-h1 {
+.form-container h1 {
 	color: #474544;
 	font-size: 32px;
 	font-weight: 700;
 	letter-spacing: 7px;
 	text-align: center;
 	text-transform: uppercase;
-	margin-top: 3rem;
+	margin-top: 2rem;
 	margin-bottom: 1rem;
 }
 
@@ -359,11 +359,55 @@ textarea {
 	background: #474544;
 	color: #f2f3eb;
 }
+@media screen and (max-width: 680px) {
+	.form-container {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+}
+@media screen and (max-width: 480px) {
+	.form-container h1 {
+		font-size: 26px;
+	}
+	.form-container {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.underline {
+		width: 68px;
+	}
+
+	#form_button {
+		padding: 15px 25px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.form-container h1 {
+		font-size: 18px;
+	}
+	.form-container {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+	.underline {
+		width: 53px;
+	}
+
+	input[type="text"],
+	[type="email"],
+	select,
+	textarea {
+		font-size: 0.875em;
+	}
+}
 
 /******************** ABOUT ME PAGE ********************/
 
 .about-container {
-	margin-top: 4rem;
+	margin-top: 5rem;
 	margin-bottom: 4rem;
 	width: 60%;
 	margin-left: auto;
@@ -383,7 +427,7 @@ textarea {
 
 .ab-photo {
 	flex: 50%;
-	align-self: flex-start;
+	align-self: center;
 }
 .ab-text {
 	flex: 50%;
@@ -472,7 +516,103 @@ textarea {
 	#photo4 {
 		display: none;
 	}
-	.ab-photo-x {
-		display: none;
+}
+
+/********** BIKES PAGE **********/
+
+.bike-container {
+	margin-top: 5rem;
+	margin-bottom: 4rem;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+.bike-info {
+	display: flex;
+	flex-wrap: wrap;
+}
+.bike-info > * {
+	padding: 1em;
+}
+
+.bike-photo {
+	flex: 49%;
+	align-self: center;
+}
+.bike-text {
+	flex: 49%;
+	font-size: 1em;
+}
+.bike-header {
+	width: 50%;
+	text-align: center;
+}
+.bike-header h3 {
+	font-size: 30px;
+	font-weight: 900;
+	border-bottom: 2px solid black;
+	padding-bottom: 0.2em;
+}
+.bike-header h3 span {
+	font-weight: 100;
+}
+
+.bike-photo img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+	.bike-photo {
+		display: flex;
+		justify-content: center;
+	}
+	.bike-photo img {
+		width: 95%;
+	}
+	.bike-text {
+		flex: 100%;
+		font-size: 0.9em;
+	}
+	.bike-header {
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 992.1px) {
+	.bike-photo {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.bike-text {
+		width: 100%;
+		font-size: 1em;
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	.bike-info {
+		margin-top: 1em;
+		flex-direction: column;
+		align-content: space-between;
+		width: 100%;
+		max-height: 40em;
+	}
+
+	.bike-text {
+		padding: 10px;
+		width: 32%;
+		font-size: 1em;
+		height: 100%;
+	}
+	.bike-photo {
+		padding: 0;
+		width: 32%;
+	}
+	.bike-photo img {
+		max-height: 300px;
 	}
 }
