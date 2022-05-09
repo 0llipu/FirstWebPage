@@ -12,7 +12,6 @@ nav {
 	align-items: center;
 	min-height: 7vh;
 	background-color: rgb(41, 0, 79);
-	font-family: "Montserrat", sans-serif;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -151,21 +150,19 @@ main {
 	color: rgb(235, 235, 235);
 	font-size: 10px;
 	text-align: center;
-	font-family: "Montserrat", sans-serif;
 	font-weight: 100;
 }
 /******************** IMAGE-GALLERY ********************/
 .img-container {
+	padding: 9vh 0 4vh 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin-top: 3rem;
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
-	padding-bottom: 5em;
 }
 
 .img-container .header h3 {
@@ -179,8 +176,7 @@ main {
 }
 .img-container .header {
 	width: 50%;
-	padding-bottom: 1em;
-	padding-top: 2rem;
+	margin-bottom: 1em;
 }
 .img-container .box {
 	display: flex;
@@ -204,8 +200,6 @@ main {
 	}
 	.img-container .header {
 		width: 75%;
-		padding-bottom: 1em;
-		padding-top: 2rem;
 	}
 }
 @media only screen and (min-width: 770.1px) {
@@ -218,8 +212,6 @@ main {
 	}
 	.img-container .header {
 		width: 70%;
-		padding-bottom: 1em;
-		padding-top: 2rem;
 	}
 }
 @media only screen and (min-width: 1050px) {
@@ -235,10 +227,10 @@ main {
 }
 
 /******************** CONTACT PAGE ********************/
-
+.fsite-container {
+	padding: 9vh 0 4vh 0;
+}
 .form-container {
-	margin-top: 5rem;
-	margin-bottom: 5rem;
 	margin-left: auto;
 	margin-right: auto;
 	border: solid 3px #474544;
@@ -405,114 +397,92 @@ textarea {
 
 /******************** ABOUT ME PAGE ********************/
 
-.about-container {
-	margin-top: 5rem;
-	margin-bottom: 4rem;
+.ab-container {
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
-	justify-content: center;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 }
-.ab-info {
-	display: flex;
-	flex-wrap: wrap;
-}
-.ab-info > * {
-	padding: 1em;
-}
-
-.ab-photo {
-	flex: 50%;
-	align-self: center;
-}
-.ab-text {
-	flex: 50%;
-	font-size: 1em;
+.main-about {
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: repeat(3, 1fr);
+	padding-top: 1em;
+	grid-template-areas:
+		"ab1 ab2 ab3"
+		"abtxt1 abtxt1 abtxt1"
+		"abtxt2 abtxt2 abtxt2";
 }
 .ab-header {
+	padding: 9vh 0 0 0;
 	width: 50%;
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 .ab-header h3 {
-	font-size: 30px;
+	font-size: 4vh;
 	font-weight: 900;
 	border-bottom: 2px solid black;
 	padding-bottom: 0.2em;
 }
-.ab-header h3 span {
+.ab-header h3 span,
+h5 span {
 	font-weight: 100;
 }
 
-.ab-photo img {
-	height: 100%;
+.ab-container img {
 	width: 100%;
 	border-radius: 5px;
 }
+.ab-container p {
+	font-size: 2vh;
+}
 
-#photo2 {
-	display: none;
-}
-#photo3 {
-	display: none;
-}
-#photo4 {
-	display: none;
-}
-@media only screen and (max-width: 899px) {
-	.ab-photo {
-		display: flex;
-		justify-content: center;
-	}
-	.ab-photo img {
-		width: 65%;
-	}
-	.ab-text {
-		flex: 100%;
-		font-size: 0.9em;
-	}
-	.ab-header {
-		width: 100%;
-	}
-}
-@media only screen and (min-width: 899.1px) {
-	.ab-photo {
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-	}
-	.ab-text {
-		width: 100%;
-		font-size: 1em;
-	}
-	#photo4 {
-		display: flex;
+@media only screen and (max-width: 600px) {
+	.ab-container p {
+		font-size: 0.875em;
 	}
 }
 
-@media only screen and (min-width: 1100px) {
-	.ab-photo {
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
+.ab-photo1 {
+	grid-area: ab1;
+}
+.ab-photo2 {
+	grid-area: ab2;
+}
+.ab-photo3 {
+	grid-area: ab3;
+}
+.ab-text1 {
+	grid-area: abtxt1;
+}
+.ab-text2 {
+	grid-area: abtxt2;
+}
+
+@media only screen and (max-width: 1078px) {
+	.main-about {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas:
+			"ab1 abtxt1 abtxt1"
+			"abtxt2 abtxt2 ab2";
 	}
-	.ab-text {
-		width: 100%;
-		flex: none;
-		font-size: 1.1em;
+	.ab-photo3 {
+		display: none;
 	}
-	.ab-photo img {
-		width: 30%;
+}
+@media only screen and (max-width: 828px) {
+	.main-about {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-areas:
+			"ab1"
+			"abtxt1"
+			"abtxt2";
 	}
-	#photo2 {
-		display: flex;
+	.ab-photo2 {
+		display: none;
 	}
-	#photo3 {
-		display: flex;
-	}
-	#photo4 {
+	.ab-photo3 {
 		display: none;
 	}
 }
@@ -520,98 +490,176 @@ textarea {
 /********** BIKES PAGE **********/
 
 .bike-container {
-	margin-top: 5rem;
-	margin-bottom: 4rem;
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
-	justify-content: center;
-	display: flex;
-	flex-wrap: wrap;
 }
-.bike-info {
-	display: flex;
-	flex-wrap: wrap;
-}
-.bike-info > * {
-	padding: 1em;
-}
-
-.bike-photo {
-	flex: 49%;
-	align-self: center;
-}
-.bike-text {
-	flex: 49%;
-	font-size: 1em;
+.main-bike {
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: repeat(3, 1fr);
+	padding-top: 1em;
+	grid-template-areas:
+		"bike1 bike2 bike3"
+		"biketxt1 biketxt2 biketxt3";
 }
 .bike-header {
+	padding: 9vh 0 0 0;
 	width: 50%;
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 .bike-header h3 {
-	font-size: 30px;
+	font-size: 4vh;
 	font-weight: 900;
 	border-bottom: 2px solid black;
 	padding-bottom: 0.2em;
 }
-.bike-header h3 span {
+.bike-header h3 span,
+h5 span {
 	font-weight: 100;
 }
 
-.bike-photo img {
+.bike-container img {
 	width: 100%;
 	border-radius: 5px;
 }
-
-@media only screen and (max-width: 992px) {
-	.bike-photo {
-		display: flex;
-		justify-content: center;
-	}
-	.bike-photo img {
-		width: 95%;
-	}
-	.bike-text {
-		flex: 100%;
-		font-size: 0.9em;
-	}
-	.bike-header {
-		width: 100%;
-	}
+.bike-container p {
+	font-size: 2vh;
 }
-@media only screen and (min-width: 992.1px) {
-	.bike-photo {
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-	}
-	.bike-text {
-		width: 100%;
-		font-size: 1em;
+
+@media only screen and (max-width: 600px) {
+	.bike-container p {
+		font-size: 0.875em;
 	}
 }
 
-@media only screen and (min-width: 1300px) {
-	.bike-info {
-		margin-top: 1em;
-		flex-direction: column;
-		align-content: space-between;
-		width: 100%;
-		max-height: 40em;
-	}
+.bike-photo1 {
+	grid-area: bike1;
+}
+.bike-photo2 {
+	grid-area: bike2;
+}
+.bike-photo3 {
+	grid-area: bike3;
+}
+.bike-text1 {
+	grid-area: biketxt1;
+}
+.bike-text2 {
+	grid-area: biketxt2;
+}
+.bike-text3 {
+	grid-area: biketxt3;
+}
 
-	.bike-text {
-		padding: 10px;
-		width: 32%;
-		font-size: 1em;
-		height: 100%;
+@media only screen and (max-width: 1078px) {
+	.main-bike {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+			"bike1 bike1 biketxt1 biketxt1"
+			"bike2 bike2  biketxt2 biketxt2"
+			"bike3 bike3 biketxt3 biketxt3";
 	}
-	.bike-photo {
-		padding: 0;
-		width: 32%;
+}
+@media only screen and (max-width: 828px) {
+	.main-bike {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-areas:
+			"bike1"
+			"biketxt1"
+			"bike2"
+			"biketxt2"
+			"bike3"
+			"biketxt3";
 	}
-	.bike-photo img {
-		max-height: 300px;
+}
+/********** INDEX PAGE **********/
+
+.index-container {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.main-index {
+	display: grid;
+	grid-gap: 1em;
+	grid-template-columns: repeat(3, 1fr);
+	padding-top: 1em;
+	grid-template-areas:
+		"indextxt1 indextxt2 indextxt3"
+		"index1 index2 index3";
+}
+.index-header {
+	padding: 9vh 0 0 0;
+	width: 50%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.index-header h3 {
+	font-size: 4vh;
+	font-weight: 900;
+	border-bottom: 2px solid black;
+	padding-bottom: 0.2em;
+}
+.index-header h3 span,
+h5 span {
+	font-weight: 100;
+}
+
+.index-container img {
+	width: 100%;
+	border-radius: 5px;
+}
+.index-container p {
+	font-size: 2vh;
+}
+
+@media only screen and (max-width: 600px) {
+	.index-container p {
+		font-size: 0.875em;
+	}
+}
+
+.index-photo1 {
+	grid-area: index1;
+}
+.index-photo2 {
+	grid-area: index2;
+}
+.index-photo3 {
+	grid-area: index3;
+}
+.index-text1 {
+	grid-area: indextxt1;
+}
+.index-text2 {
+	grid-area: indextxt2;
+}
+.index-text3 {
+	grid-area: indextxt3;
+}
+
+@media only screen and (max-width: 1078px) {
+	.main-index {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+			"indextxt1 indextxt1 index1 index1 "
+			"indextxt2 indextxt2 index2 index2 "
+			"indextxt3 indextxt3 index3 index3 ";
+	}
+}
+@media only screen and (max-width: 828px) {
+	.main-index {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-areas:
+			"indextxt1"
+			"index1"
+			"indextxt2"
+			"index2"
+			"indextxt3"
+			"index3";
 	}
 }
