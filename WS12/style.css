@@ -88,9 +88,10 @@ nav {
 		background-color: rgb(41, 0, 79);
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: left;
+		padding-left: 7vw;
+		padding-right: 7vw;
 		justify-content: flex-start;
-		min-width: 33%;
 		transform: translateX(100%);
 		transition: transform 0.5s ease-in;
 	}
@@ -130,6 +131,23 @@ nav {
 	transform: rotate(45deg) translate(-4px, -6px);
 }
 
+/******************** HEADER ********************/
+
+.x-header h3 {
+	font-size: 1.6em;
+	margin: 9vh 0 0.5em 0;
+	text-align: center;
+	font-weight: 900;
+	border-bottom: 2px solid black;
+	padding-bottom: 0.2em;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.x-header span {
+	font-weight: 100;
+}
+
 /******************** FOOTER ********************/
 .footer {
 	background-color: rgb(41, 0, 79);
@@ -154,87 +172,57 @@ main {
 }
 /******************** IMAGE-GALLERY ********************/
 .img-container {
-	padding: 9vh 0 4vh 0;
+	margin-bottom: 4vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	width: 60%;
+	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-.img-container .header h3 {
-	font-size: 30px;
-	font-weight: 900;
-	border-bottom: 2px solid black;
-	padding-bottom: 0.2em;
-}
-.img-container .header h3 span {
-	font-weight: 100;
-}
-.img-container .header {
-	width: 50%;
-	margin-bottom: 1em;
 }
 .img-container .box {
 	display: flex;
 	flex-wrap: wrap;
 }
 .img-container .box .photos {
-	flex: 24%;
-	margin: 3px;
+	margin: 0.2em;
 }
 .img-container .box .photos img {
 	width: 100%;
-	border-radius: 5px;
+	border-radius: 0.3em;
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 600px) {
 	.img-container .box .photos {
 		flex: 100%;
 	}
-	.img-container .header h3 {
-		font-size: 24px;
-		padding-bottom: 0.1em;
-	}
-	.img-container .header {
-		width: 75%;
-	}
 }
-@media only screen and (min-width: 770.1px) {
+@media only screen and (min-width: 600.1px) {
 	.img-container .box .photos {
 		flex: 48%;
 	}
-	.img-container .header h3 {
-		font-size: 26px;
-		padding-bottom: 0.2em;
-	}
-	.img-container .header {
-		width: 70%;
+}
+@media only screen and (min-width: 800.1px) {
+	.img-container .box .photos {
+		flex: 48%;
 	}
 }
-@media only screen and (min-width: 1050px) {
+
+@media only screen and (min-width: 1024px) {
 	.img-container .box .photos {
 		flex: 24%;
-	}
-	.img-container .header h3 {
-		font-size: 30px;
-	}
-	.img-container .header {
-		width: 65%;
 	}
 }
 
 /******************** CONTACT PAGE ********************/
-.fsite-container {
-	padding: 9vh 0 4vh 0;
-}
+
 .form-container {
 	margin-left: auto;
 	margin-right: auto;
-	border: solid 3px #474544;
-	max-width: 666px;
+	border: solid 2px #474544;
+	max-width: 669px;
+	border-radius: 5px;
 }
 .email {
 	width: 100%;
@@ -289,17 +277,6 @@ form {
 	padding: 37.5px;
 }
 
-.form-container h1 {
-	color: #474544;
-	font-size: 32px;
-	font-weight: 700;
-	letter-spacing: 7px;
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-}
-
 input[type="text"],
 [type="email"],
 select,
@@ -335,6 +312,7 @@ textarea {
 #form_button {
 	background: none;
 	border: solid 2px #474544;
+	border-radius: 5px;
 	color: #474544;
 	cursor: pointer;
 	display: inline-block;
@@ -357,32 +335,23 @@ textarea {
 	}
 }
 @media screen and (max-width: 480px) {
-	.form-container h1 {
-		font-size: 26px;
-	}
 	.form-container {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
-
 	.underline {
 		width: 68px;
 	}
-
 	#form_button {
 		padding: 15px 25px;
 	}
 }
 
 @media screen and (max-width: 420px) {
-	.form-container h1 {
-		font-size: 18px;
-	}
 	.form-container {
 		margin-left: 1rem;
 		margin-right: 1rem;
 	}
-
 	.underline {
 		width: 53px;
 	}
@@ -401,33 +370,17 @@ textarea {
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 9vh;
 }
 .main-about {
 	display: grid;
-	grid-gap: 1em;
+	grid-gap: 2em;
 	grid-template-columns: repeat(3, 1fr);
 	padding-top: 1em;
 	grid-template-areas:
 		"ab1 ab2 ab3"
 		"abtxt1 abtxt1 abtxt1"
 		"abtxt2 abtxt2 abtxt2";
-}
-.ab-header {
-	padding: 9vh 0 0 0;
-	width: 50%;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
-.ab-header h3 {
-	font-size: 4vh;
-	font-weight: 900;
-	border-bottom: 2px solid black;
-	padding-bottom: 0.2em;
-}
-.ab-header h3 span,
-h5 span {
-	font-weight: 100;
 }
 
 .ab-container img {
@@ -436,12 +389,6 @@ h5 span {
 }
 .ab-container p {
 	font-size: 2vh;
-}
-
-@media only screen and (max-width: 600px) {
-	.ab-container p {
-		font-size: 0.875em;
-	}
 }
 
 .ab-photo1 {
@@ -460,7 +407,7 @@ h5 span {
 	grid-area: abtxt2;
 }
 
-@media only screen and (max-width: 1078px) {
+@media only screen and (max-width: 1024px) {
 	.main-about {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-areas:
@@ -469,6 +416,9 @@ h5 span {
 	}
 	.ab-photo3 {
 		display: none;
+	}
+	.ab-container p {
+		font-size: 0.85em;
 	}
 }
 @media only screen and (max-width: 828px) {
@@ -485,6 +435,15 @@ h5 span {
 	.ab-photo3 {
 		display: none;
 	}
+	.ab-container p {
+		font-size: 0.875em;
+	}
+	.ab-container img {
+		width: 75%;
+	}
+	.main-about {
+		text-align: center;
+	}
 }
 
 /********** BIKES PAGE **********/
@@ -493,6 +452,7 @@ h5 span {
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 9vh;
 }
 .main-bike {
 	display: grid;
@@ -503,38 +463,14 @@ h5 span {
 		"bike1 bike2 bike3"
 		"biketxt1 biketxt2 biketxt3";
 }
-.bike-header {
-	padding: 9vh 0 0 0;
-	width: 50%;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
-.bike-header h3 {
-	font-size: 4vh;
-	font-weight: 900;
-	border-bottom: 2px solid black;
-	padding-bottom: 0.2em;
-}
-.bike-header h3 span,
-h5 span {
-	font-weight: 100;
-}
 
 .bike-container img {
 	width: 100%;
 	border-radius: 5px;
 }
 .bike-container p {
-	font-size: 2vh;
+	font-size: 1em;
 }
-
-@media only screen and (max-width: 600px) {
-	.bike-container p {
-		font-size: 0.875em;
-	}
-}
-
 .bike-photo1 {
 	grid-area: bike1;
 }
@@ -557,10 +493,14 @@ h5 span {
 @media only screen and (max-width: 1078px) {
 	.main-bike {
 		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 2em;
 		grid-template-areas:
 			"bike1 bike1 biketxt1 biketxt1"
 			"bike2 bike2  biketxt2 biketxt2"
 			"bike3 bike3 biketxt3 biketxt3";
+	}
+	.bike-container p {
+		font-size: 0.85em;
 	}
 }
 @media only screen and (max-width: 828px) {
@@ -574,6 +514,15 @@ h5 span {
 			"bike3"
 			"biketxt3";
 	}
+	.bike-container p {
+		font-size: 0.875em;
+	}
+	.bike-container img {
+		width: 75%;
+	}
+	.main-bike {
+		text-align: center;
+	}
 }
 /********** INDEX PAGE **********/
 
@@ -581,6 +530,7 @@ h5 span {
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 9vh;
 }
 .main-index {
 	display: grid;
@@ -591,36 +541,10 @@ h5 span {
 		"indextxt1 indextxt2 indextxt3"
 		"index1 index2 index3";
 }
-.index-header {
-	padding: 9vh 0 0 0;
-	width: 50%;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
-.index-header h3 {
-	font-size: 4vh;
-	font-weight: 900;
-	border-bottom: 2px solid black;
-	padding-bottom: 0.2em;
-}
-.index-header h3 span,
-h5 span {
-	font-weight: 100;
-}
 
 .index-container img {
 	width: 100%;
 	border-radius: 5px;
-}
-.index-container p {
-	font-size: 2vh;
-}
-
-@media only screen and (max-width: 600px) {
-	.index-container p {
-		font-size: 0.875em;
-	}
 }
 
 .index-photo1 {
@@ -650,6 +574,12 @@ h5 span {
 			"indextxt2 indextxt2 index2 index2 "
 			"indextxt3 indextxt3 index3 index3 ";
 	}
+	.ubdex-container p {
+		font-size: 0.875em;
+	}
+	.index-header h5 {
+		font-size: 1.35em;
+	}
 }
 @media only screen and (max-width: 828px) {
 	.main-index {
@@ -661,5 +591,17 @@ h5 span {
 			"index2"
 			"indextxt3"
 			"index3";
+	}
+	.index-container p {
+		font-size: 0.85em;
+	}
+	.index-header h5 {
+		font-size: 1.25em;
+	}
+	.index-container img {
+		width: 75%;
+	}
+	.main-index {
+		text-align: center;
 	}
 }
